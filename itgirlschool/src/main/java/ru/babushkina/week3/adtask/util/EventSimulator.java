@@ -9,8 +9,8 @@ public class EventSimulator {
     // 4. медведь пробежал -15 энергии 20% 30-50
     // 5. медведь стоит и смотрит - 1 энергия 3% 50-53
     // 6. медведь съел рыбу - 7 энергии; fangscoeff * 5 здоровья 10% 53-63
-    // 7. медведь съел мёд - 6 энергии; fangscoeff * 4 здоровья 5% 63-68
-    // 8. медведь съел ягоды - 5 энергии; fangscoeff * 3 здоровья 5% 68-73
+    // 7. медведь съел мёд - 5 энергии; fangscoeff * 4 здоровья 5% 63-68
+    // 8. медведь съел малину - 3 энергии; fangscoeff * 3 здоровья 5% 68-73
     // 9. на медведя напал охотник - 25 здоровья; 17% 73-100
     // 10. энергия медведя = 0 => -5 здоровья
 
@@ -85,7 +85,7 @@ public class EventSimulator {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
 
-        energy = energy - 6;
+        energy = energy - 5;
         if (energy < 0) {
             energy = 0;
         }
@@ -95,6 +95,22 @@ public class EventSimulator {
         }
         bear.setEnergy(energy);
         bear.setHealth(health);
-        System.out.println("Медведь съел своё любимое лакомство - мёд, потратил на это 6 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
+        System.out.println("Медведь съел своё любимое лакомство - мёд, потратил на это 5 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
+    }
+    private void eatRaspberryEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        int health = bear.getHealth();
+
+        energy = energy - 3;
+        if (energy < 0) {
+            energy = 0;
+        }
+        health = health + (int) (bear.getFANGCOEFF() * 3);
+        if (health > 100) {
+            health = 100;
+        }
+        bear.setEnergy(energy);
+        bear.setHealth(health);
+        System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
     }
 }
