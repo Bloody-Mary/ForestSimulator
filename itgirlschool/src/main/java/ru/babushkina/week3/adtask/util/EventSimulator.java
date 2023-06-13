@@ -28,13 +28,13 @@ public class EventSimulator {
         System.out.println("Медвед поспал и восстановил 10 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
 
-    //private void walkEvent(Bear bear) {
-      //  int energy = bear.getEnergy();
-        //energy = energy - 5;
-        //if(energy < 0) {
-          //  energy = 0;
-       // }
-       // bear.setEnergy(energy);
-        //System.out.println("Медведь гуляет, смотрит по сторонам и тратит на это 5 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
-    //}
+    private void walkEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        energy = energy - 5;
+        if(energy < 0) {
+            energy = 0;
+        }
+        bear.setEnergy(energy);
+        System.out.println("Медведь гуляет, смотрит по сторонам и тратит на это 5 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
+    }
 }
