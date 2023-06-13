@@ -11,7 +11,7 @@ public class EventSimulator {
     // 6. медведь съел рыбу - 7 энергии; fangscoeff * 5 здоровья 10% 53-63
     // 7. медведь съел мёд - 5 энергии; fangscoeff * 4 здоровья 5% 63-68
     // 8. медведь съел малину - 3 энергии; fangscoeff * 3 здоровья 5% 68-73
-    // 9. на медведя напал охотник - 25 здоровья; 17% 73-100
+    // 9. на медведя напал охотник - 25 здоровья; -15 энергии 17% 73-100
     // 10. энергия медведя = 0 => -5 здоровья
 
     public void launchSimulator(Bear bear) {
@@ -144,10 +144,15 @@ public class EventSimulator {
         System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
     private void hunterAttacks(Bear bear) {
+        int energy = bear.getEnergy();
         int health = bear.getHealth();
         health -= 25;
         if (health < 0) {
             health = 0;
+        }
+        energy -= 15;
+        if (energy < 0) {
+            energy = 0;
         }
         bear.setHealth(health);
         checkEnergy(bear);
