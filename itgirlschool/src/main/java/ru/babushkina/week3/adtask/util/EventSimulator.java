@@ -21,7 +21,7 @@ public class EventSimulator {
     private void sleepEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy = energy + 10;
-        if(energy > 100) {
+        if (energy > 100) {
             energy = 100;
         }
         bear.setEnergy(energy);
@@ -31,7 +31,7 @@ public class EventSimulator {
     private void walkEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy = energy - 5;
-        if(energy < 0) {
+        if (energy < 0) {
             energy = 0;
         }
         bear.setEnergy(energy);
@@ -40,7 +40,7 @@ public class EventSimulator {
     private void huntEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy = energy - 10;
-        if(energy < 0) {
+        if (energy < 0) {
             energy = 0;
         }
         bear.setEnergy(energy);
@@ -49,7 +49,7 @@ public class EventSimulator {
     private void runEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy = energy - 15;
-        if(energy < 0) {
+        if (energy < 0) {
             energy = 0;
         }
         bear.setEnergy(energy);
@@ -58,7 +58,7 @@ public class EventSimulator {
     private void standAndWatchEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy = energy - 1;
-        if(energy < 0) {
+        if (energy < 0) {
             energy = 0;
         }
         bear.setEnergy(energy);
@@ -67,16 +67,34 @@ public class EventSimulator {
     private void eatFishEvent(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
+
         energy = energy - 7;
         if (energy < 0) {
             energy = 0;
         }
         health = health + (int) (bear.getFANGCOEFF() * 5);
-        if(health > 100) {
+        if (health > 100) {
             health = 100;
         }
         bear.setEnergy(energy);
         bear.setHealth(health);
         System.out.println("Медведь съел вкусную рыбу, потратил на это 7 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "и текущее здоровье: " + bear.getHealth());
+    }
+
+    private void eatHoneyEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        int health = bear.getHealth();
+
+        energy = energy - 6;
+        if (energy < 0) {
+            energy = 0;
+        }
+        health = health + (int) (bear.getFANGCOEFF() * 4);
+        if (health > 100) {
+            health = 100;
+        }
+        bear.setEnergy(energy);
+        bear.setHealth(health);
+        System.out.println("Медведь съел своё любимое лакомство - мёд, потратил на это 6 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
     }
 }
