@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df8fb6f8-2380-42ec-8d51-44a44e601a25" name="Changes" comment="" />
+    <list default="true" id="df8fb6f8-2380-42ec-8d51-44a44e601a25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/util/EventSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/util/EventSimulator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +81,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/_main/_Main.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
