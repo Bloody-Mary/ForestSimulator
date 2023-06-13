@@ -64,4 +64,19 @@ public class EventSimulator {
         bear.setEnergy(energy);
         System.out.println("Медведь стоит, смотрит по сторонам и тратит на это всего лишь 1 энергию. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
+    private void eatFishEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        int health = bear.getHealth();
+        energy = energy - 7;
+        if (energy < 0) {
+            energy = 0;
+        }
+        health = health + (int) (bear.getFANGCOEFF() * 5);
+        if(health > 100) {
+            health = 100;
+        }
+        bear.setEnergy(energy);
+        bear.setHealth(health);
+        System.out.println("Медведь съел вкусную рыбу, потратил на это 7 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "и текущее здоровье: " + bear.getHealth());
+    }
 }
