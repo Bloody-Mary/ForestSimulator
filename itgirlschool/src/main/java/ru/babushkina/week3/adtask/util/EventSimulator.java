@@ -113,4 +113,13 @@ public class EventSimulator {
         bear.setHealth(health);
         System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
     }
+    private void hunterAttacks(Bear bear) {
+        int health = bear.getHealth();
+        health = health - 25;
+        if (health < 0) {
+            health = 0;
+        }
+        bear.setHealth(health);
+        System.out.println("О, нет! На медведя напал охотник! :( Теперь его здоровье равно: " + bear.getHealth());
+    }
 }
