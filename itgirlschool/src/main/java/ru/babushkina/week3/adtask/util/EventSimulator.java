@@ -122,4 +122,14 @@ public class EventSimulator {
         bear.setHealth(health);
         System.out.println("О, нет! На медведя напал охотник! :( Теперь его здоровье равно: " + bear.getHealth());
     }
+    private void runOutOfEnergyEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        int health = bear.getHealth();
+        if (energy == 0) {
+            health -= 5;
+        }
+        bear.setEnergy(energy);
+        bear.setHealth(health);
+        System.out.println("Энергия медведя равна нулю!!! Он теряет " + bear.getHealth() + "здоровья!");
+    }
 }
