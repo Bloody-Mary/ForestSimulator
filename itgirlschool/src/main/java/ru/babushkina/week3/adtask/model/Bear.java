@@ -3,7 +3,7 @@ package ru.babushkina.week3.adtask.model;
 public class Bear {
     private int health = 100;
     private int energy = 100;
-    private final double FANGSCOEFFICIENT = 5.5;
+    private final double FANGSCOEFF = 1.5;
 
     public void setHealth(int health) {
         this.health = health;
@@ -19,7 +19,7 @@ public class Bear {
         return this.energy;
     }
 
-    public double getFANGCOEFFICIENT() {
-        return this.FANGSCOEFFICIENT;
+    public double getFANGCOEFF() {
+        return this.FANGSCOEFF;
     }
 }

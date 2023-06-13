@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df8fb6f8-2380-42ec-8d51-44a44e601a25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/_main/_Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/model/Bear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/util/EventProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/task1/CarPark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/task2/CarConstruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/model/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/model/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/util/EventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/babushkina/week3/adtask/util/EventSimulator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
