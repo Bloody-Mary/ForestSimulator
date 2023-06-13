@@ -46,4 +46,13 @@ public class EventSimulator {
         bear.setEnergy(energy);
         System.out.println("Медведь охотиться и тратит 10 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
+    private void runEvent(Bear bear) {
+        int energy = bear.getEnergy();
+        energy = energy - 15;
+        if(energy < 0) {
+            energy = 0;
+        }
+        bear.setEnergy(energy);
+        System.out.println("Медведь бежит и тратит 15 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
+    }
 }
