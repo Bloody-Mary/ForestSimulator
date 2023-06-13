@@ -37,7 +37,7 @@ public class EventSimulator {
                 hunterAttacks(bear);
             }
         }
-        System.out.println("О, нет! Наш мишка умир! :( Game over...");
+        System.out.println("О, нет! Наш мишка умер! :( Game over.");
     }
 
     private void sleepEvent(Bear bear) {
@@ -151,7 +151,7 @@ public class EventSimulator {
         }
         bear.setHealth(health);
         checkEnergy(bear);
-        System.out.println("О, нет! На медведя напал охотник! :( Теперь его здоровье равно: " + bear.getHealth());
+        System.out.println("Ого! На медведя напал охотник! Теперь его здоровье равно: " + bear.getHealth());
     }
     private void runOutOfEnergyEvent(Bear bear) {
         int energy = bear.getEnergy();
@@ -164,6 +164,7 @@ public class EventSimulator {
         System.out.println("Энергия медведя равна нулю!!! Он теряет " + bear.getHealth() + "здоровья!");
     }
     private boolean checkStatus(Bear bear) {
+        System.out.println("Очки здоровья: " + bear.getHealth() + " количество энергии: " + bear.getEnergy());
         if (bear.getHealth() <= 0) {
             return false;
         } else {
