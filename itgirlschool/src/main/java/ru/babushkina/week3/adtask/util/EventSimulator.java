@@ -37,6 +37,7 @@ public class EventSimulator {
                 hunterAttacks(bear);
             }
         }
+        System.out.println("О, нет! Наш мишка умир! :( Game over...");
     }
 
     private void sleepEvent(Bear bear) {
