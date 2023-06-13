@@ -106,7 +106,7 @@ public class EventSimulator {
         bear.setEnergy(energy);
         bear.setHealth(health);
         checkEnergy(bear);
-        System.out.println("Медведь съел вкусную рыбу, потратил на это 7 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "и текущее здоровье: " + bear.getHealth());
+        System.out.println("Медведь съел вкусную рыбу, потратил на это 7 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
 
     private void eatHoneyEvent(Bear bear) {
@@ -124,7 +124,7 @@ public class EventSimulator {
         bear.setEnergy(energy);
         bear.setHealth(health);
         checkEnergy(bear);
-        System.out.println("Медведь съел своё любимое лакомство - мёд, потратил на это 5 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
+        System.out.println("Медведь съел своё любимое лакомство - мёд, потратил на это 5 энергии и восстановил здоровье. Теперь его текущая энергия равна: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
     private void eatRaspberryEvent(Bear bear) {
         int energy = bear.getEnergy();
@@ -141,7 +141,7 @@ public class EventSimulator {
         bear.setEnergy(energy);
         bear.setHealth(health);
         checkEnergy(bear);
-        System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + "текущее здоровье: " + bear.getHealth());
+        System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
     private void hunterAttacks(Bear bear) {
         int health = bear.getHealth();
