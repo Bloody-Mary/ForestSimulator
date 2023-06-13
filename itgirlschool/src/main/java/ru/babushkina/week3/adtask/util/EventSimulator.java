@@ -20,7 +20,7 @@ public class EventSimulator {
 
     private void sleepEvent(Bear bear) {
         int energy = bear.getEnergy();
-        energy = energy + 10;
+        energy += 10;
         if (energy > 100) {
             energy = 100;
         }
@@ -30,7 +30,7 @@ public class EventSimulator {
 
     private void walkEvent(Bear bear) {
         int energy = bear.getEnergy();
-        energy = energy - 5;
+        energy -= 5;
         if (energy < 0) {
             energy = 0;
         }
@@ -39,7 +39,7 @@ public class EventSimulator {
     }
     private void huntEvent(Bear bear) {
         int energy = bear.getEnergy();
-        energy = energy - 10;
+        energy -= 10;
         if (energy < 0) {
             energy = 0;
         }
@@ -48,7 +48,7 @@ public class EventSimulator {
     }
     private void runEvent(Bear bear) {
         int energy = bear.getEnergy();
-        energy = energy - 15;
+        energy -= 15;
         if (energy < 0) {
             energy = 0;
         }
@@ -57,7 +57,7 @@ public class EventSimulator {
     }
     private void standAndWatchEvent(Bear bear) {
         int energy = bear.getEnergy();
-        energy = energy - 1;
+        energy -= 1;
         if (energy < 0) {
             energy = 0;
         }
@@ -68,11 +68,11 @@ public class EventSimulator {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
 
-        energy = energy - 7;
+        energy -= 7;
         if (energy < 0) {
             energy = 0;
         }
-        health = health + (int) (bear.getFANGCOEFF() * 5);
+        health += (int) (bear.getFANGCOEFF() * 5);
         if (health > 100) {
             health = 100;
         }
@@ -85,11 +85,11 @@ public class EventSimulator {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
 
-        energy = energy - 5;
+        energy -= 5;
         if (energy < 0) {
             energy = 0;
         }
-        health = health + (int) (bear.getFANGCOEFF() * 4);
+        health += (int) (bear.getFANGCOEFF() * 4);
         if (health > 100) {
             health = 100;
         }
@@ -101,11 +101,11 @@ public class EventSimulator {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
 
-        energy = energy - 3;
+        energy -= 3;
         if (energy < 0) {
             energy = 0;
         }
-        health = health + (int) (bear.getFANGCOEFF() * 3);
+        health += (int) (bear.getFANGCOEFF() * 3);
         if (health > 100) {
             health = 100;
         }
@@ -115,7 +115,7 @@ public class EventSimulator {
     }
     private void hunterAttacks(Bear bear) {
         int health = bear.getHealth();
-        health = health - 25;
+        health -= 25;
         if (health < 0) {
             health = 0;
         }
@@ -131,5 +131,23 @@ public class EventSimulator {
         bear.setEnergy(energy);
         bear.setHealth(health);
         System.out.println("Энергия медведя равна нулю!!! Он теряет " + bear.getHealth() + "здоровья!");
+    }
+    private boolean checkStatus(Bear bear) {
+        if (bear.getHealth() <= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private void checkEnergy(Bear bear) {
+        if (bear.getEnergy() <= 0) {
+            int health = bear.getHealth();
+            health -= 5;
+            if (health < 0) {
+                health = 0;
+            }
+            bear.setHealth(health);
+        }
     }
 }
