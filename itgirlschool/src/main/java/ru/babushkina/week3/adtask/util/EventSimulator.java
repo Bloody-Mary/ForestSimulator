@@ -61,6 +61,7 @@ public class EventSimulator {
         checkEnergy(bear);
         System.out.println("Медведь гуляет, смотрит по сторонам и тратит на это 5 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
+    
     private void huntEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy -= 10;
@@ -71,6 +72,7 @@ public class EventSimulator {
         checkEnergy(bear);
         System.out.println("Медведь охотиться и тратит 10 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
+    
     private void runEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy -= 15;
@@ -81,6 +83,7 @@ public class EventSimulator {
         checkEnergy(bear);
         System.out.println("Медведь бежит и тратит 15 энергии. Теперь его текущая энергия равна: " + bear.getEnergy());
     }
+    
     private void standAndWatchEvent(Bear bear) {
         int energy = bear.getEnergy();
         energy -= 1;
@@ -94,7 +97,6 @@ public class EventSimulator {
     private void eatFishEvent(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
-
         energy -= 7;
         if (energy < 0) {
             energy = 0;
@@ -112,7 +114,6 @@ public class EventSimulator {
     private void eatHoneyEvent(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
-
         energy -= 5;
         if (energy < 0) {
             energy = 0;
@@ -129,7 +130,6 @@ public class EventSimulator {
     private void eatRaspberryEvent(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
-
         energy -= 3;
         if (energy < 0) {
             energy = 0;
@@ -143,6 +143,7 @@ public class EventSimulator {
         checkEnergy(bear);
         System.out.println("Медведь съел любимую малину, потратил на это 3 энергии и восстановил здоровье. Теперь его энергия равна: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
+    
     private void hunterAttacks(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
@@ -159,6 +160,7 @@ public class EventSimulator {
         checkEnergy(bear);
         System.out.println("Ого! На медведя напал охотник! Теперь его текущая энергия: " + bear.getEnergy() + ", текущее здоровье: " + bear.getHealth());
     }
+    
     private void runOutOfEnergyEvent(Bear bear) {
         int energy = bear.getEnergy();
         int health = bear.getHealth();
@@ -169,6 +171,7 @@ public class EventSimulator {
         bear.setHealth(health);
         System.out.println("Энергия медведя равна нулю!!! Он теряет " + bear.getHealth() + "здоровья!");
     }
+    
     private boolean checkStatus(Bear bear) {
         System.out.println("Количество энергии: " + bear.getEnergy() + ", очки здоровья: " + bear.getHealth());
         if (bear.getHealth() <= 0) {
